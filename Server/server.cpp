@@ -86,30 +86,3 @@ void Server::SendToClient(QString str)
             Sockets[i]->write(Data);
         }
 }
-
-void Server::TestConnect()
-{
-    /// У нас ничего не вышло
-    /// Мы это сделаем в скором времени
-    /// doxygen
-
-    db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("Database.db");
-    if (db.open()) {
-        qDebug("database opened");
-
-        query = new QSqlQuery(db);
-        query -> exec("select * from Queue");
-        query -> next();
-
-        qDebug() << query->size();
-        while (query->next()) {
-            qDebug() << query;
-
-        }
-    } else {
-        qDebug("database doesn't open");
-    }
-
-    qDebug("Db end");
-}

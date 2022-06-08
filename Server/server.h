@@ -5,10 +5,6 @@
 #include <QDataStream>
 #include <QVector>
 #include <QString>
-#include <QSqlError>
-#include <QSqlDatabase>
-#include <QSqlQuery>
-
 
 class Server: public QTcpServer
 {
@@ -17,14 +13,11 @@ class Server: public QTcpServer
 public:
     Server();
     QTcpSocket *socket;
-    void TestConnect();
 private:
     QVector <QTcpSocket*> Sockets;
     QByteArray Data;
     void SendToClient(QString str);
     quint16 nextBlockSize;
-    QSqlDatabase db;
-        QSqlQuery *query;
 public slots:
     void incomingConnection(qintptr socketDeskriptor);
     void slotReadyRead();
