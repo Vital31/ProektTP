@@ -10,6 +10,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(socket, &QTcpSocket::readyRead, this, &MainWindow::slotReadyRead);
     connect(socket, &QTcpSocket::disconnected, socket, &QTcpSocket::deleteLater);
     nextBlockSize = 0;
+
+    socket->connectToHost("127.0.0.1", 2323);  // подключение к хосту
 }
 
 MainWindow::~MainWindow()
@@ -20,7 +22,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    socket->connectToHost("127.0.0.1", 2323);
+
 }
 
 void MainWindow::SendToServer(QString str)
@@ -77,7 +79,12 @@ void MainWindow::slotReadyRead()
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    SendToServer(ui->lineEdit->text());
+    //SendToServer(ui->lineEdit->text());
+   // SendToServer("[new]Maxim|211-352|Van");
+    /// lineEdit username
+    /// lineEdit_2 group
+    /// lineEdit_3 Teacher
+    SendToServer(QString("[new]%1|%2|%3").arg(ui->lineEdit->text(), ui->lineEdit_2->text(), ui->lineEdit_3->text()));
 }
 
 
