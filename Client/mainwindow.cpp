@@ -23,6 +23,8 @@ void MainWindow::on_pushButton_clicked()
     socket->connectToHost("127.0.0.1", 2323);
 }
 
+
+
 void MainWindow::SendToServer(QString str)
 {
     Data.clear();
@@ -77,7 +79,7 @@ void MainWindow::slotReadyRead()
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    SendToServer(ui->lineEdit->text());
+    SendToServer(QString("[new]%1|%2|%3").arg(ui->lineEdit->text(), ui->lineEdit_2->text(), ui->lineEdit_3->text()));
 }
 
 
