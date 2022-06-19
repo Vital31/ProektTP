@@ -87,29 +87,43 @@ void Server::SendToClient(QString str)
         }
 }
 
-void Server::TestConnect()
+void Server::TestConnect(QStringList data)
 {
     /// У нас ничего не вышло
     /// Мы это сделаем в скором времени
     /// doxygen
 
     db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("Database.db");
+    db.setDatabaseName("12345.db");
     if (db.open()) {
         qDebug("database opened");
-
-        query = new QSqlQuery(db);
+        SetDb(db, data[0], data[1], data[2], "0");
+       /* query = new QSqlQuery(db);
         query -> exec("select * from Queue");
-        query -> next();
-
-        qDebug() << query->size();
         while (query->next()) {
-            qDebug() << query;
-
-        }
+            qDebug() << QString("[%1%5%2%5%3%5%4]").arg(query->value("Name").toString(),
+                                                        query->value("Groups").toString(),
+                                                        query->value("Teachers").toString(),
+                                                        query->value("id_num").toString(),
+                                                        "    |");
+        } */
     } else {
         qDebug("database doesn't open");
     }
 
     qDebug("Db end");
 }
+
+void Server::SetDb(QSqlDatabase database, QString name,
+                   QString group, QString teachers, QString subject)
+{
+    query = new QSqlQuery(database);
+    qDebug()<<QString("insert into Queue values ('%1', '%2', '%3', %4);").arg(name, group, teachers, subject);
+    query -> exec(QString("insert into Queue values ('%1', '%2', '%3', %4);").arg(name, group, teachers, subject));
+}
+
+QStringList Server::decode(QString str)
+{
+    return str.split("|");
+}
+

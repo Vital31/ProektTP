@@ -17,14 +17,20 @@ class Server: public QTcpServer
 public:
     Server();
     QTcpSocket *socket;
-    void TestConnect();
+    void TestConnect(QStringList data);
+    void SetDb(QSqlDatabase database, QString name,
+               QString group, QString teachers, QString subject);
+
 private:
     QVector <QTcpSocket*> Sockets;
     QByteArray Data;
-    void SendToClient(QString str);
-    quint16 nextBlockSize;
     QSqlDatabase db;
-        QSqlQuery *query;
+    QSqlQuery *query;
+    quint16 nextBlockSize;
+
+    QStringList decode(QString str);
+    void SendToClient(QString str);
+
 public slots:
     void incomingConnection(qintptr socketDeskriptor);
     void slotReadyRead();
