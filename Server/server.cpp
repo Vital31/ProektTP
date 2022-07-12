@@ -93,6 +93,10 @@ void Server::SendToClient(QString str)
             Sockets[i]->write(Data);
         }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> b0a19df139c766a16cc9d28ee812b1d181e94553
 void Server::TestConnect(QStringList data)
 {
     /// У нас ничего не вышло
