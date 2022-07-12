@@ -58,7 +58,14 @@ void Server::slotReadyRead()
             QString str;
             in >> str;
             nextBlockSize = 0;
-            qDebug()<<str;
+            if (str.left(5)=="[new]")
+            {
+                qDebug()<<decode(str.mid(5, str.length()));
+                TestConnect(decode(str.mid(5, str.length())));
+
+            }else {
+                qDebug()<<str;
+            }
             //ui->textBrowser->append(str);
             SendToClient(str);
             break;
@@ -86,7 +93,6 @@ void Server::SendToClient(QString str)
             Sockets[i]->write(Data);
         }
 }
-
 void Server::TestConnect(QStringList data)
 {
     /// У нас ничего не вышло

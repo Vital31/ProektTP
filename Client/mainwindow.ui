@@ -15,30 +15,23 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
+    <item row="4" column="0" colspan="2">
+     <widget class="QTextBrowser" name="textBrowser"/>
+    </item>
     <item row="0" column="0">
-     <widget class="QSplitter" name="splitter_3">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
+     <widget class="QLineEdit" name="lineEdit"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLineEdit" name="lineEdit_2"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLineEdit" name="lineEdit_3"/>
+    </item>
+    <item row="0" column="1" rowspan="2">
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="text">
+       <string>Встать в очередь</string>
       </property>
-      <widget class="QSplitter" name="splitter_2">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <widget class="QSplitter" name="splitter">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <widget class="QLineEdit" name="lineEdit"/>
-        <widget class="QLineEdit" name="lineEdit_2"/>
-        <widget class="QLineEdit" name="lineEdit_3"/>
-       </widget>
-       <widget class="QPushButton" name="pushButton_2">
-        <property name="text">
-         <string>Встать в очередь</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QTextBrowser" name="textBrowser"/>
      </widget>
     </item>
    </layout>
@@ -49,7 +42,7 @@
      <x>0</x>
      <y>0</y>
      <width>394</width>
-     <height>25</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
