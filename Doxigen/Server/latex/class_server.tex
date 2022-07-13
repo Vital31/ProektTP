@@ -1,0 +1,112 @@
+\hypertarget{class_server}{}\doxysection{Server Class Reference}
+\label{class_server}\index{Server@{Server}}
+Inheritance diagram for Server\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_server}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_server_aad5a11c5335b8538ebfbdaed66fba856}{incoming\+Connection}} (qintptr socket\+Deskriptor)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_server_aad5a11c5335b8538ebfbdaed66fba856}{Server\+::incoming\+Connection}} Проверяет входящее соединение/подключение к серверу \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_server_ad7f0bc4f93fa08a16565f7f22cc562c5}\label{class_server_ad7f0bc4f93fa08a16565f7f22cc562c5}} 
+void {\bfseries slot\+Ready\+Read} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_server_ad7f0bc4f93fa08a16565f7f22cc562c5}{Server\+::slot\+Ready\+Read}} передает данные между сревером и клиентом \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_server_ad5ec9462b520e59f7ea831e157ee5e59}{Server}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_server_ad5ec9462b520e59f7ea831e157ee5e59}{Server\+::\+Server}} Проверяет соединение с хостом \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_server_a3ddac633f44c76000d2ea53eb130192c}{Test\+Connect}} (QString\+List data)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_server_a3ddac633f44c76000d2ea53eb130192c}{Server\+::\+Test\+Connect}} проверка на открытие и подключение базы данных \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_server_a3f286cafe1966af864909ff6577f837b}{Set\+Db}} (QSql\+Database database, QString name, QString group, QString teachers, QString subject)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_server_a3f286cafe1966af864909ff6577f837b}{Server\+::\+Set\+Db}} Подключение к бд \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_server_ac7f958096890d0442b711a38000a02f7}\label{class_server_ac7f958096890d0442b711a38000a02f7}} 
+QTcp\+Socket $\ast$ {\bfseries socket}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_server_ad5ec9462b520e59f7ea831e157ee5e59}\label{class_server_ad5ec9462b520e59f7ea831e157ee5e59}} 
+\index{Server@{Server}!Server@{Server}}
+\index{Server@{Server}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{Server()}{Server()}}
+{\footnotesize\ttfamily Server\+::\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_server_ad5ec9462b520e59f7ea831e157ee5e59}{Server\+::\+Server}} Проверяет соединение с хостом 
+
+\begin{DoxyAuthor}{Author}
+Виталий, Дмитрий, Владислав, Кирилл 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_server_aad5a11c5335b8538ebfbdaed66fba856}\label{class_server_aad5a11c5335b8538ebfbdaed66fba856}} 
+\index{Server@{Server}!incomingConnection@{incomingConnection}}
+\index{incomingConnection@{incomingConnection}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{incomingConnection}{incomingConnection}}
+{\footnotesize\ttfamily void Server\+::incoming\+Connection (\begin{DoxyParamCaption}\item[{qintptr}]{socket\+Desckriptor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_server_aad5a11c5335b8538ebfbdaed66fba856}{Server\+::incoming\+Connection}} Проверяет входящее соединение/подключение к серверу 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket\+Desckriptor} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_server_a3f286cafe1966af864909ff6577f837b}\label{class_server_a3f286cafe1966af864909ff6577f837b}} 
+\index{Server@{Server}!SetDb@{SetDb}}
+\index{SetDb@{SetDb}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{SetDb()}{SetDb()}}
+{\footnotesize\ttfamily void Server\+::\+Set\+Db (\begin{DoxyParamCaption}\item[{QSql\+Database}]{database,  }\item[{QString}]{name,  }\item[{QString}]{group,  }\item[{QString}]{teachers,  }\item[{QString}]{subject }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_server_a3f286cafe1966af864909ff6577f837b}{Server\+::\+Set\+Db}} Подключение к бд 
+
+
+\begin{DoxyParams}{Parameters}
+{\em database} & \\
+\hline
+{\em name} & \\
+\hline
+{\em group} & \\
+\hline
+{\em teachers} & \\
+\hline
+{\em subject} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_server_a3ddac633f44c76000d2ea53eb130192c}\label{class_server_a3ddac633f44c76000d2ea53eb130192c}} 
+\index{Server@{Server}!TestConnect@{TestConnect}}
+\index{TestConnect@{TestConnect}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{TestConnect()}{TestConnect()}}
+{\footnotesize\ttfamily $<$$<$$<$$<$$<$$<$$<$ HEAD=======$>$ b0a19df139c766a16cc9d28ee812b1d181e94553 void Server\+::\+Test\+Connect (\begin{DoxyParamCaption}\item[{QString\+List}]{data }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_server_a3ddac633f44c76000d2ea53eb130192c}{Server\+::\+Test\+Connect}} проверка на открытие и подключение базы данных 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+server.\+h\item 
+server.\+cpp\end{DoxyCompactItemize}

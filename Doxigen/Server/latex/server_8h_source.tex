@@ -1,0 +1,56 @@
+\hypertarget{server_8h_source}{}\doxysection{server.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SERVER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SERVER\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <QTcpServer>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QTcpSocket>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <QDataStream>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <QVector>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <QString>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <QSqlError>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <QSqlDatabase>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <QSqlQuery>}}
+\DoxyCodeLine{11 <<<<<<< HEAD}
+\DoxyCodeLine{12 =======}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 >>>>>>> b0a19df139c766a16cc9d28ee812b1d181e94553}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_server}{Server}}: \textcolor{keyword}{public} QTcpServer}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18     Q\_OBJECT}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_server_ad5ec9462b520e59f7ea831e157ee5e59}{Server}}();}
+\DoxyCodeLine{22     QTcpSocket *socket;}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_server_a3ddac633f44c76000d2ea53eb130192c}{TestConnect}}(QStringList data);}
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_server_a3f286cafe1966af864909ff6577f837b}{SetDb}}(QSqlDatabase database, QString name,}
+\DoxyCodeLine{25                QString group, QString teachers, QString subject);}
+\DoxyCodeLine{26 <<<<<<< HEAD}
+\DoxyCodeLine{27 =======}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 >>>>>>> b0a19df139c766a16cc9d28ee812b1d181e94553}
+\DoxyCodeLine{30 \textcolor{keyword}{private}:}
+\DoxyCodeLine{31     QVector <QTcpSocket*> Sockets;}
+\DoxyCodeLine{32     QByteArray Data;}
+\DoxyCodeLine{33     QSqlDatabase db;}
+\DoxyCodeLine{34     QSqlQuery *query;}
+\DoxyCodeLine{35     quint16 nextBlockSize;}
+\DoxyCodeLine{36 <<<<<<< HEAD}
+\DoxyCodeLine{37     QStringList decode(QString str);}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} SendToClient(QString str);}
+\DoxyCodeLine{39 =======}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     QStringList decode(QString str);}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} SendToClient(QString str);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 >>>>>>> b0a19df139c766a16cc9d28ee812b1d181e94553}
+\DoxyCodeLine{45 \textcolor{keyword}{public} slots:}
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_server_aad5a11c5335b8538ebfbdaed66fba856}{incomingConnection}}(qintptr socketDeskriptor);}
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_server_ad7f0bc4f93fa08a16565f7f22cc562c5}{slotReadyRead}}();}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \};}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SERVER\_H}}
+
+\end{DoxyCode}

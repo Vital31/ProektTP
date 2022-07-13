@@ -25,8 +25,6 @@ void MainWindow::on_pushButton_clicked()
 
 }
 
-
-
 void MainWindow::SendToServer(QString str)
 {
     Data.clear();
@@ -81,14 +79,11 @@ void MainWindow::slotReadyRead()
 
 void MainWindow::on_pushButton_2_clicked()
 {
-<<<<<<< HEAD
     //SendToServer(ui->lineEdit->text());
    // SendToServer("[new]Maxim|211-352|Van");
     /// lineEdit username
     /// lineEdit_2 group
     /// lineEdit_3 Teacher
-=======
->>>>>>> b0a19df139c766a16cc9d28ee812b1d181e94553
     SendToServer(QString("[new]%1|%2|%3").arg(ui->lineEdit->text(), ui->lineEdit_2->text(), ui->lineEdit_3->text()));
 }
 
