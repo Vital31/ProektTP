@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Обратная форма связи</title>
+</head>
+<body>
+    <main>
+        <h1>Форма обратной связи</h1>
+
+        <form method="POST" action="http://httpbin.org/post" enctype="multipart/form-data">
+
+            <input type="hidden" name="user_id" value="1">
+
+
+            <div>
+                <label for="fio">ФИО</label>
+                <input type="text" name="fio" id="fio" placeholder="Введите ФИО">
+            </div>
+            
+            <div>
+                <label for="email">Адресс электронной почты</label>
+                <input type="email" name="email" id="email" value="qq@gmail.com" required>
+            </div>
+
+
+
+
+            <fieldset>
+                <legend>Откуда вы узнали о нас?</legend>
+            
+                <div>
+                  <input type="radio" id="friends" name="source" value="friends" checked>
+                  <label for="friends">Рассказали друзьям</label>
+                </div>
+            
+                <div>
+                  <input type="radio" id="internet" name="source" value="internet">
+                  <label for="internet">Реклама в интернете</label>
+                </div>
+            </fieldset>
+        
+            <div>
+                <label for="category">Категория обращения</label>
+                <select name="category_id" id="category" multiple>
+                    <option value="1">Жалоба</option>
+                    <option value="2" selected>Предложение</option>
+                </select>
+            </div>
+
+            <div>
+                <input type="checkbox" name="agreement" id="agreement" value="true" required>
+                <label for="agreement">Согласен с обработкой персноальных данных</label>
+            </div>
+
+            <div>
+                <label for="attachment">Вложение</label>
+                <input type="file" name="attachment" id="attachment">
+            </div>
+
+            <button type="submit">отправить</button>
+        
+        </form>
+
+    </main>
+</body>
+</html>

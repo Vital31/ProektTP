@@ -1,0 +1,114 @@
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header{
+    background-color: rgba(255, 0, 0, 0.5);
+    color: black;
+    padding: 20px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-image: url(images/ser.jpg);
+    background-size: color;
+}
+
+.main-menu ui {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.main-menu li:last-child {
+    margin-right: 0;
+}
+
+.contanier{
+    max-width: 75%;
+    margin: 0 auto;
+
+}
+p {
+    text-align: justify;
+}
+
+.footer {
+    background-color: rgb(160, 160, 160);
+    padding: 0px 0;
+    color: rgb(0, 0, 0);
+    text-align: end;
+
+}
+
+.avatar{
+    height: 300px;
+    background-image: url(images/pe1.jpg);
+}
+
+.avatar img{
+    height: 100%;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.w-50{
+    width: 50%;
+}
+
+.mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn{
+    display:  inline-block;
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 5px;
+}
+ .contact-me-btn{
+    color: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
+
+ }
+ table{
+    border-collapse: collapse;
+ }
+
+ th, td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+ }
+
+.leftimg {
+    float:left; /* Выравнивание по левому краю */
+    margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
+}
+
+.rightimg  {
+    float: right; /* Выравнивание по правому краю  */ 
+    margin: 20px 0 20px 20px; /* Отступы вокруг картинки */
+}
+
+.figcaption {
+    margin: 0; /* Отступы вокруг абзаца */
+    width: 300px;
+}
+
+.det {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+
+  
